@@ -10,13 +10,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/korotovsky/slack-mcp-server/pkg/limiter"
-	"github.com/korotovsky/slack-mcp-server/pkg/provider/edge"
-	"github.com/korotovsky/slack-mcp-server/pkg/transport"
 	"github.com/rusq/slackdump/v3/auth"
 	"github.com/slack-go/slack"
 	"go.uber.org/zap"
 	"golang.org/x/time/rate"
+	"slack-mcp-server/pkg/limiter"
+	"slack-mcp-server/pkg/provider/edge"
+	"slack-mcp-server/pkg/transport"
 )
 
 const usersNotReadyMsg = "users cache is not ready yet, sync process is still running... please wait"

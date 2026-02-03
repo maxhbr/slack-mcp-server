@@ -12,4 +12,9 @@
 /npm/slack-mcp-server/.npmrc
 /npm/slack-mcp-server/LICENSE
 /npm/slack-mcp-server/README.md
+dotenv
 docker-compose.release.yml
+
+# Nix
+result
+result-*

@@ -6,14 +6,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/korotovsky/slack-mcp-server/pkg/handler"
-	"github.com/korotovsky/slack-mcp-server/pkg/provider"
-	"github.com/korotovsky/slack-mcp-server/pkg/server/auth"
-	"github.com/korotovsky/slack-mcp-server/pkg/text"
-	"github.com/korotovsky/slack-mcp-server/pkg/version"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 	"go.uber.org/zap"
+	"slack-mcp-server/pkg/handler"
+	"slack-mcp-server/pkg/provider"
+	"slack-mcp-server/pkg/server/auth"
+	"slack-mcp-server/pkg/text"
+	"slack-mcp-server/pkg/version"
 )
 
 type MCPServer struct {

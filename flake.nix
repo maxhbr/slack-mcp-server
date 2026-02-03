@@ -19,7 +19,7 @@
             go-tools
             gotestsum
             godot
-            make
+            gnumake
             git
             jq
             docker
