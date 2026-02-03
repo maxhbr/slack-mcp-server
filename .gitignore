@@ -5,8 +5,7 @@
 .channels_cache_v2.json
 /extension.dxt/server/slack-mcp-server-*
 /extension.dxt/server/index.js
-/build/slack-mcp-server-*
-/build/slack-mcp-server.dxt
+/build
 /npm/slack-mcp-server-*/bin/slack-mcp-server-*
 /npm/slack-mcp-server-*/.npmrc
 /npm/slack-mcp-server/.npmrc
