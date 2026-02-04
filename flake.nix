@@ -10,7 +10,6 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-
         dev-shell = pkgs.mkShell {
           buildInputs = with pkgs; [
             go
@@ -47,8 +46,44 @@
           '';
         };
 
+      package = pkgs.buildGoModule rec {
+          pname = "slack-mcp-server";
+          version = "0.1.0";
+
+          src = ./.;
+
+          vendorHash = "sha256-ddbYtTjNC4Ig9PSSylXd069Vtlxmc5utDgmoFRpqgWQ=";
+
+          mod = "mod";
+
+          doCheck = false;
+
+          ldflags = [
+            "-s"
+            "-w"
+          ];
+
+          meta = with pkgs.lib; {
+            description = "Model Context Protocol server for Slack Workspaces";
+            homepage = "https://github.com/example/slack-mcp-server";
+            license = licenses.mit;
+            mainProgram = "slack-mcp-server";
+          };
+        };
+
       in
       {
+        packages = {
+          default = package;
+        };
+
+        apps = {
+          default = {
+            type = "app";
+            program = "${package}/bin/slack-mcp-server";
+          };
+        };
+
         devShells = {
           default = dev-shell;
         };
